@@ -5,6 +5,8 @@ all: up
 
 build:
 	npm install 
+	# npm install --save three
+	# npm install --save-dev @types/three
 	npx tsc
 
 # Default target
