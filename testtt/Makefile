@@ -4,11 +4,9 @@ PROJECT_NAME = transcendence
 all: up
 
 build:
-	npm install 
-	# npm install --save three
-	# npm install --save-dev @types/three
+	@if [ ! -f package.json ]; then npm init -y; fi
+	npm install
 	npx tsc
-
 # Default target
 
 

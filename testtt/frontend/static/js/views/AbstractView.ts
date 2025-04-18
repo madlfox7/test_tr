@@ -24,39 +24,20 @@
 // 	// Removes all the event listeners attached to the document that were added by the view 
 // 	cleanUpEventListeners() {}
 // }
-
-/**
- * Abstract base class for all views
- */
-export default abstract class AbstractView {
+export default class AbstractView {
 	constructor() {}
 
-	/**
-	 * Sets the document title
-	 * @param title The new page title
-	 */
 	setTitle(title: string): void {
 		document.title = title;
 	}
 
-	/**
-	 * Returns the HTML content of the view.
-	 * Must be implemented by subclasses.
-	 */
-	abstract getHtml(): Promise<string>;
+	async getHtml(): Promise<string> {
+		return "";
+	}
 
-	/**
-	 * Called when the view's JavaScript should be loaded (e.g., event binding)
-	 */
 	loadJS(): void {}
 
-	/**
-	 * Called when the view needs to stop ongoing actions (e.g., animations, loops)
-	 */
 	stopJS(): void {}
 
-	/**
-	 * Called to remove all event listeners from the document
-	 */
 	cleanUpEventListeners(): void {}
 }

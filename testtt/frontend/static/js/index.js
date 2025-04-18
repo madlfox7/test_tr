@@ -2,21 +2,21 @@
 // A view is a class containing the HTML and JS of a page
 console.log("Hello world!");
 import Home from "./views/Home.js";
-// import Pong from "./views/Pong.js";
-// import Pong3d from "./views/Pong3d.js";
-// import PongMenu from "./views/PongMenu.js";
+import Pong from "./views/Pong.js";
+import Pong3d from "./views/Pong3d.js";
+import PongMenu from "./views/PongMenu.js";
 import Settings from "./views/Settings.js";
-// import Pacman from "./views/Pacman.js";
-// import PacmanMenu from "./views/PacmanMenu.js";
+import Pacman from "./views/Pacman.js";
+import PacmanMenu from "./views/PacmanMenu.js";
  import NotFound from "./views/NotFound.js";
-// import Games from "./views/Games.js";
-// import Profile from "./views/Profile.js";
-// import SignIn from "./views/SignIn.js";
-// import SignUp from "./views/SignUp.js";
-// import EditProfile from "./views/EditProfile.js";
-// import Friends from "./views/Friends.js";
-// import PongStatistics from "./views/PongStatistics.js";
-// import PacmanStatistics from "./views/PacmanStatistics.js";
+import Games from "./views/Games.js";
+import Profile from "./views/Profile.js";
+import SignIn from "./views/SignIn.js";
+import SignUp from "./views/SignUp.js";
+import EditProfile from "./views/EditProfile.js";
+import Friends from "./views/Friends.js";
+import PongStatistics from "./views/PongStatistics.js";
+import PacmanStatistics from "./views/PacmanStatistics.js";
 
 // ------------------------------- IMPORT VISUAL EFFECTS -------------------------------
 import { animateLetters, initLoadTransition, initInteractiveBubble } from './visual/effects.js'
@@ -24,6 +24,7 @@ import { animateLetters, initLoadTransition, initInteractiveBubble } from './vis
 // ------------------------------- IMPORT UTILS ---------------------------------
 import { updateTexts } from "./utils/languages.js";
 import { applySettings } from "./utils/applySettings.js";
+//import applySettings from './utils/applySettings.js';
 import { attachEventListenersToLinks } from "./utils/utils.js";
 
 // ------------------------------- CONFIGURE GLOBAL VARIABLES -------------------------------
@@ -53,20 +54,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 // Array that contains all routes where each route has a path and a view
 const routes = [
 	{ path: "/", view: Home },
-	// { path: "/pong", view: Pong },
-	// { path: "/pong3d", view: Pong3d },
-	// { path: "/pongMenu", view: PongMenu },
-	// { path: "/pacman", view: Pacman },
-	// { path: "/pacmanMenu", view: PacmanMenu },
+	{ path: "/pong", view: Pong },
+	{ path: "/pong3d", view: Pong3d },
+	{ path: "/pongMenu", view: PongMenu },
+	{ path: "/pacman", view: Pacman },
+	{ path: "/pacmanMenu", view: PacmanMenu },
 	{ path: "/settings", view: Settings },
-	// { path: "/games", view: Games },
-	// { path: "/profile", view: Profile },
-	// { path: "/signin", view: SignIn },
-	// { path: "/signup", view: SignUp },
-	// { path: "/edit-profile", view: EditProfile },
-	// { path: "/friends", view: Friends },
-	// { path: "/pong-statistics", view: PongStatistics },
-	// { path: "/pacman-statistics", view: PacmanStatistics }
+	{ path: "/games", view: Games },
+	{ path: "/profile", view: Profile },
+	{ path: "/signin", view: SignIn },
+	{ path: "/signup", view: SignUp },
+	{ path: "/edit-profile", view: EditProfile },
+	{ path: "/friends", view: Friends },
+	{ path: "/pong-statistics", view: PongStatistics },
+	{ path: "/pacman-statistics", view: PacmanStatistics }
 ];
 
 // Loads the view (HTML and JS) in the div with the id "app" according to the current path
