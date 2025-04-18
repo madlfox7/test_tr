@@ -1,0 +1,12 @@
+  {
+    "scripts": {
+      "build": "tsc && npx tailwindcss -i ./styles/input.css -o ./dist/styles.css --minify",
+      "dev": "npx http-server ./dist -p 5050"
+    },
+    "dependencies": {},
+    "devDependencies": {
+      "tailwindcss": "^3.3.0",
+      "typescript": "^5.0.0",
+      "http-server": "^14.0.0"
+    }
+  }

@@ -1,0 +1,12 @@
+  {
+    "compilerOptions": {
+      "outDir": "./dist", // Compiled JS files will go to dist/
+      "rootDir": "./src", // The source files are in src/
+      "strict": true,     // Enable strict type checking
+      "module": "esnext", // Use modern ES modules
+      "target": "es6"     // Compile to ES6 JavaScript
+    },
+    "include": ["src/**/*"], // Include all TypeScript files in src/
+    "exclude": ["node_modules"] // Exclude node_modules from compilation
+  }
+  

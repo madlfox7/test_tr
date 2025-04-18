@@ -1,0 +1,30 @@
+
+networks:
+  transcendence:
+    driver: bridge
+
+services:
+  nginx:
+    image: nginx
+    container_name: nginx
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "8443:443"
+    networks:
+      - transcendence
+  
+  frontend:
+    image: frontend
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./frontend:/app/frontend
+    ports:
+      - "5050:5050"
+    networks:
+      - transcendence
